@@ -19,15 +19,15 @@
 
 	#right-panel{
 		background: url(/static/cloud.jpg) repeat;
-		float: right;
+		position: absolute;
 		border-style: solid;
-		
+		left: 410px;
 		border-bottom: 4px solid yellow;
 		border-top: 4px solid blue;
 		border-left:4px dotted red;
 		border-right:4px dotted green;
 		border-radius: 900px;
-		width: 950px;
+		width: 840px;
 		height: 440px;
 		padding:30px;
 		
@@ -55,9 +55,9 @@
 <center><h1 style="color:red">Take a look Over our Services</h1></center>
 <form action="service.py" method="post">
 <div id="side-panel">
-	<h2 id="saas" onmouseover="display('Saas')"><input type="radio" name="service" value="saas" onclick="location.href='/cgi-bin/saas.py'"> &nbsp&nbspSoftware as a &nbsp&nbsp&nbsp&nbsp&nbsp&nbspService(SAAS)</h2>
-	<h2 id="staas" onmouseover="display('Staas')"><input type="radio" name="service" value="staas" onclick="location.href='/cgi-bin/staas.py'"> &nbsp&nbspStorage as a &nbsp&nbsp&nbsp&nbsp&nbsp&nbspService(StAAS)</h2>
-	<h2 id="iaas" onmouseover="display('Iaas')"><input type="radio" name"service" value="iaas" onclick="location.href='/cgi-bin/iaas.py'"> &nbsp&nbspInfrastructure &nbsp&nbsp&nbsp&nbsp&nbsp  as a Service</h2>
+	<h2 id="saas" onmouseover="display('Saas')"><input type="radio" name="service" value="saas" onclick="location.href='/services/saas.html'"> &nbsp&nbspSoftware as a &nbsp&nbsp&nbsp&nbsp&nbsp&nbspService(SAAS)</h2>
+	<h2 id="staas" onmouseover="display('Staas')"><input type="radio" name="service" value="staas" onclick="location.href='services/staas.py'"> &nbsp&nbspStorage as a &nbsp&nbsp&nbsp&nbsp&nbsp&nbspService(StAAS)</h2>
+	<h2 id="iaas" onmouseover="display('Iaas')"><input type="radio" name"service" value="iaas" onclick="location.href='services/iaas.py'"> &nbsp&nbspInfrastructure &nbsp&nbsp&nbsp&nbsp&nbsp  as a Service</h2>
 </div>
 <input type="submit" id="submit" value="Proceed">
 </form>
@@ -90,3 +90,9 @@
 
 	</body>
 		</html>
+	'''
+
+error = '''
+	<html>
+		<script>alert("wrong username password")</script>
+	</html>
