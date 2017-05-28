@@ -1,5 +1,5 @@
 #!/usr/bin/python2
 import os
 os.system('service restart rpcbind')
-os.system('mkdir /media/aa')
-os.system('mount -t nfs 127.0.0.1:/mnt/aa /media/aa')
+os.system('mkdir /media/laalu')
+os.system('mount -t nfs 192.168.1.200:/mnt/laalu /media/laalu')

@@ -1,0 +1,4 @@
+#!/usr/bin/python2
+import os
+os.system('iscsiadm --mode discoverydb --type sendtargets --portal 192.168.122.238 --discover')
+os.system('iscsiadm --mode node --targetname iqn.2003-11.lalussss.com:adhoc --portal 192.168.122.238:3260 --login')
