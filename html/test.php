@@ -1,4 +1,4 @@
 <?php
 
-$a=shell_exec("sudo useradd lal")
+$a=shell_exec("hello world")
 ?>
