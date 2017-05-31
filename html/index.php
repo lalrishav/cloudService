@@ -1,7 +1,8 @@
 <!DOCTYPE>
 <html>
 	<head>
-		<title>Welcome to LPCloud Service</title>
+		
+		<title>Hello world</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
 		<style type="text/css">
