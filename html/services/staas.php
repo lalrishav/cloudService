@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(!isset($_SESSION['user'])){
+	die();	
+}
+
+
+
+?>
+
+
 <html>
 <head>
 	<script>
@@ -41,7 +52,8 @@
 <body>
 	<h1> <span style="color:blue;"><i>STAAS</i></span></h1>
 	<h3>For linuix users</h3>
-	<form action="/cgi-bin/staas.py">
+	<form action="/cgi-bin/aws/staas.py" method="POST">
+		<input type="hidden" name="uname" value="<?php  echo $_SESSION['user']  ?>" >
 		<input type="text" name="dname" placeholder="enter the drive name"><br><br>
 		<input type="text" name="dsize" placeholder="enter the drive size"><br><br>
 		<input type="submit" value="submit" name="submit">

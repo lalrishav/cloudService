@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['user']))
+	die();
+
+
+
+?>
+
+
 <html>
 		<head>
 <title>Welcome</title>
@@ -55,12 +65,12 @@
 <center><h1 style="color:red">Take a look Over our Services</h1></center>
 <form action="service.py" method="post">
 <div id="side-panel">
-	<h2 id="saas" onmouseover="display('Saas')"><input type="radio" name="service" value="saas" onclick="location.href='/services/saas.html'"> &nbsp&nbspSoftware as a &nbsp&nbsp&nbsp&nbsp&nbsp&nbspService(SAAS)</h2>
-	<h2 id="staas" onmouseover="display('Staas')"><input type="radio" name="service" value="staas" onclick="location.href='services/staas.py'"> &nbsp&nbspStorage as a &nbsp&nbsp&nbsp&nbsp&nbsp&nbspService(StAAS)</h2>
-	<h2 id="iaas" onmouseover="display('Iaas')"><input type="radio" name"service" value="iaas" onclick="location.href='services/iaas.py'"> &nbsp&nbspInfrastructure &nbsp&nbsp&nbsp&nbsp&nbsp  as a Service</h2>
+	<h2 id="saas" onmouseover="display('Saas')"><input type="radio" name="service" value="saas" onclick="location.href='/services/saas.php'"> &nbsp&nbspSoftware as a &nbsp&nbsp&nbsp&nbsp&nbsp&nbspService(SAAS)</h2>
+	<h2 id="staas" onmouseover="display('Staas')"><input type="radio" name="service" value="staas" onclick="location.href='/services/staas.php'"> &nbsp&nbspStorage as a &nbsp&nbsp&nbsp&nbsp&nbsp&nbspService(StAAS)</h2>
+	<h2 id="iaas" onmouseover="display('Iaas')"><input type="radio" name"service" value="iaas" onclick="location.href='services/iaas.php'"> &nbsp&nbspInfrastructure &nbsp&nbsp&nbsp&nbsp&nbsp  as a Service</h2>
 </div>
-<input type="submit" id="submit" value="Proceed">
 </form>
+<input type="button" id="submit" value="Logout" onclick="location.href='/php/logout.php'">
 <div id="right-panel">
 	<div id="aboutSaas" style="display:block">
 		<center><h2>Software as a Service</h2>
@@ -90,9 +100,4 @@
 
 	</body>
 		</html>
-	'''
 
-error = '''
-	<html>
-		<script>alert("wrong username password")</script>
-	</html>

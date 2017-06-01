@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])){
+		header("Location:/services.php");
+}
+
+
+
+?>
+
+
 <!DOCTYPE>
 <html>
 	<head>
@@ -76,7 +87,7 @@
 		<br><br>
 		<center><div id="authentication">
 			
-			<form id="shell" style="display:block" action="/cgi-bin/login.py" method="POST">
+			<form id="shell" style="display:block" action="php/login.php" method="POST">
 				<center>Login Please</center>
 				<br>
 				<input type="text" placeholder="Enter your username" name="user">

@@ -10,6 +10,9 @@ data = cgi.FieldStorage()
 dname = data.getvalue("dname")
 dsize = data.getvalue("dsize")
 uname = data.getvalue("uname")
+print dname
+print dsize
+print uname
 
 instance_id = "i-05327d8531056e3e9"
 instance_type = "t2.micro"
