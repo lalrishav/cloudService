@@ -1,12 +1,11 @@
+<body oncontextmenu="return false">
 <?php
 
-$login = 'foo';
-$pass = 'pass';
-$hash = base64_encode(sha1($pass, true));
+$a=5;
+echo "<form action=rishav>";
+echo "<input type=text value=$a";
 
-$contents = $login . ':{SHA}' . $hash;
-
-file_put_contents('/etc/httpd/.htpasswd', $contents);
-echo "done"
 
 ?>
+
+</body>
