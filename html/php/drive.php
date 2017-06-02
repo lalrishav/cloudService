@@ -5,15 +5,15 @@ function is_in_dir($file, $directory, $recursive = true, $limit = 1000) {
     $directory = realpath($directory);
     $parent = realpath($file);
     $i = 0;
-    while ($parent) {
         if ($directory == $parent) return true;
         if ($parent == dirname($parent) || !$recursive) break;
         $parent = dirname($parent);
     }
     return false;
 }
-
-$path = "/../../html";
+session_start();
+$user = $_SESSION['user'];
+$path = "/../../html/users/$user";
 if (isset($_GET['file'])) {
     $path = $_GET['file'];
     if (!is_in_dir($_GET['file'], $root)) {
