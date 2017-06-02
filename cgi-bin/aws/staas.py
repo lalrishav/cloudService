@@ -1,5 +1,5 @@
 #!/usr/bin/python2
-import cgi,commands
+import cgi,commands,time
 server_ip = "0.0.0.0"
 
 print "Content-type:text/html"
@@ -19,12 +19,16 @@ instance_type = "t2.micro"
 availability_zone = "us-west-2c"
 
 #print "sudo aws ec2 create-volume --size {} --region us-east-2 --availability-zone {} --volume-type gp2".format(dsize,availability_zone)+"\n"
-x=commands.getoutput("sudo aws ec2 create-volume --size {} --region us-west-2 --availability-zone us-west-2c --volume-type gp2".format(dsize))
+'''x=commands.getoutput("sudo aws ec2 create-volume --size {} --region us-west-2 --availability-zone us-west-2c --volume-type gp2".format(dsize))
+print x
 vid = (x.split(","))[3].split(":")[1]
 print "<pre>"
-print commands.getoutput("sudo aws ec2 attach-volume --volume-id {} --instance-id {} --region us-west-2 --device /dev/sdf".format(vid,instance_id))
+time.sleep(30)
+print commands.getoutput("sudo aws ec2 attach-volume --volume-id {} --instance-id {} --region us-west-2 --device /dev/{}vda".format(vid,instance_id,uname))
 
-print "</pre>"
+print "</pre>"'''
+
+
 
 
 
@@ -44,3 +48,4 @@ print "</pre>"
 
 
 print dname
+
