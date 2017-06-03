@@ -78,10 +78,32 @@ if(!isset($_SESSION['user'])){
 </div>
 
 
+
+
 <form action="/cgi-bin/drive.py" method="post">
 <input type="hidden" value="qwerty" name="secret_key">
 <input type="hidden" value="<?php echo $_SESSION['user']  ?>" name="user">
 <input type="submit" value="View Disk">
+</form>
+<h3>Upload</h3>
+<form action="/php/upload.php" method="post" enctype="multipart/form-data">
+<select name="drive">
+<?php 
+session_start();
+$user = $_SESSION['user'];
+$x=scandir("/var/www/html/users/$user");
+?> 
+<?php foreach($x as $count=>$y){
+	if($count<2)
+		continue;
+?>
+<option value="<?php echo $y ?>"><?php echo $y ?></option>
+<?php } ?>
+</select><br><br>
+ <input id='upload' name="upload[]" type="file" multiple="multiple" /><br><br>
+<input type="submit" value="upload" name="submit">
+
+
 </form>
 
 

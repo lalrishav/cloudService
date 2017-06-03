@@ -33,8 +33,10 @@ print "<pre>"
 print "@@@@@@@@@@@"
 if(os.path.exists(uname)==False):
 	commands.getoutput("sudo mkdir /var/www/html/users/" + uname)
+	commands.getoutput("sudo chmod 777 /var/www/html/users/"+uname)
 mnt_point = "/var/www/html/users/" + uname + "/" + dname
 print commands.getoutput("sudo mkdir "+mnt_point)
+print commands.getoutput("sudo chmod 777 "+mnt_point)
 print "</pre>"
 print "<pre>"
 print commands.getoutput("sudo mount /dev/mapper/myhd-" + dname + " " + mnt_point)
