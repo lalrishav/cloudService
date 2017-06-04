@@ -22,6 +22,6 @@ def list_files(startpath):
 user=form.getvalue("user")
 secret_key = form.getvalue("secret_key")
 if secret_key == "qwerty":
-	list_files("/var/www/html/users/lalihav")
+	list_files("/var/www/html/users/"+user)
 
 print "</pre>"

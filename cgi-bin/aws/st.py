@@ -33,10 +33,10 @@ print "<pre>"
 print "@@@@@@@@@@@"
 if(os.path.exists(uname)==False):
 	commands.getoutput("sudo mkdir /var/www/html/users/" + uname)
-	commands.getoutput("sudo chmod 777 /var/www/html/users/"+uname)
+       #commands.getoutput("sudo chmod 777 /var/www/html/users/"+uname)
 mnt_point = "/var/www/html/users/" + uname + "/" + dname
 print commands.getoutput("sudo mkdir "+mnt_point)
-print commands.getoutput("sudo chmod 777 "+mnt_point)
+#print commands.getoutput("sudo chmod 777 "+mnt_point)
 print "</pre>"
 print "<pre>"
 print commands.getoutput("sudo mount /dev/mapper/myhd-" + dname + " " + mnt_point)
@@ -74,8 +74,10 @@ print commands.getoutput("sudo systemctl restart rpcbind")
 print commands.getoutput("sudo exportfs -r")
 print commands.getoutput("sudo setenforce 0")
 print commands.getoutput("sudo iptables -F")
-
+#print commands.getoutput("sudo apachectl graceful")
 print "Your drive has been created Successfully"
+#commands.getoutput("sudo systemctl stop httpd")
+#commands.getoutput("sudo systemctl start httpd")
 print "<a href='/users/{}/{}'>See your drive</a>".format(uname,dname)
 
 
