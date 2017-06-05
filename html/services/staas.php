@@ -106,6 +106,11 @@ $x=scandir("/var/www/html/users/$user");
 
 </form>
 
+<form action="/cgi-bin/aws/webserver.py" method="post">
+<input type="hidden" value="<?php echo $_SESSION['user'] ?>" name="user">
+<input type="submit" value="Want a web server">
+</form>
+
 
 
 
