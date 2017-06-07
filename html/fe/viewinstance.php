@@ -393,7 +393,7 @@
                     <?php foreach($files as $count=>$file){?>
                     <?php if($count<2) continue; ?>
                     <tr>
-                      <td class="hidden-xs"><input type="checkbox" value="<?php echo $file ?>" name="acton[]"></td>
+                      <td class="hidden-xs"><input type="radio" value="<?php echo $file ?>" name="acton"></td>
                       <td>
                         <h5 class="product-title font-alt"><?php echo $file ?></h5>
                       </td>
@@ -425,6 +425,7 @@
               <div class="col-sm-3">
                 <div class="form-group">
                   <button class="btn btn-round btn-g" type="submit">Apply</button>
+                  <input type="hidden" value="<?php echo $user ?>" name="user">
                 </form>
                 </div>
               </div>
