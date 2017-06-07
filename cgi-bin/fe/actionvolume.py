@@ -9,7 +9,7 @@ vid = data.getvalue("acton")
 action = data.getvalue("action")
 user = data.getvalue("user")
 def terminate(vid,action):
-	print commands.getoutput("sudo aws ec2 delete-volume --volume-id {}".format(vid,action))
+	print commands.getoutput("sudo aws ec2 delete-volume --volume-id {}".format(vid))
 	print commands.getoutput("sudo rm -rf /database/{}/volumes/{}".format(user,vid))
 	print "successfully deleted"
 
