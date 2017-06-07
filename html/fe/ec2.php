@@ -360,7 +360,7 @@
         <section class="module">
           <div class="container">
             <div class="row multi-columns-row">
-              <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/instance.php'">
                 <div class="price-table font-alt">
                   <h4>Launch Instance</h4>
                   <div class="borderline"></div>
@@ -375,7 +375,7 @@
                   </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/ebs.php'">
                 <div class="price-table font-alt">
                   <h4>Create Raw Storage</h4>
                   <div class="borderline"></div>

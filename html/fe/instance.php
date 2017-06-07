@@ -360,7 +360,7 @@
         <section class="module">
           <div class="container">
             <div class="row multi-columns-row">
-              <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/launchnew.php'">
                 <div class="price-table font-alt">
                   <h4>Launch New Instance</h4>
                   <div class="borderline"></div>
@@ -390,7 +390,7 @@
                   </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/viewinstance.php'">
                 <div class="price-table font-alt best">
                   <h4>Instances</h4>
                   <p class="small">Best Choice</p>
@@ -406,7 +406,7 @@
                   </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/ami.php'">
                 <div class="price-table font-alt">
                   <h4>AMIs</h4>
                   <div class="borderline"></div>

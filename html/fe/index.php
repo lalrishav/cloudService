@@ -390,9 +390,9 @@ if(!isset($_SESSION['user'])){
         <section class="module-medium" id="demos">
           <div class="container">
             <div class="row multi-columns-row">
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_mp_fullscreen_video_background.html">
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="ec2.php">
                   <div class="content-box-image"><img src="assets/images/screenshots/aws.png" alt="Main Demo"></div>
-                  <h3 class="content-box-title font-serif">Get Ec2 Infrastructure</h3></a></div>
+                  <a href="/fe/ec2.php"><h3 class="content-box-title font-serif">Get Ec2 Infrastructure</h3></a></div>
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_agency.html">
                   <div class="content-box-image"><img src="assets/images/screenshots/agency.jpg" alt="Agency"></div>
                   <h3 class="content-box-title font-serif">Agency</h3></a></div>
