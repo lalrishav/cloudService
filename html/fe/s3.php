@@ -375,9 +375,9 @@
                   </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/ebs.php'">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/viewbucket.php'">
                 <div class="price-table font-alt">
-                  <h4>Create Raw Storage</h4>
+                  <h4>View Bucket</h4>
                   <div class="borderline"></div>
                   <p class="price"><span>$</span>29
                   </p>
@@ -408,7 +408,7 @@
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="price-table font-alt">
-                  <h4>Purchase Public IP</h4>
+                  <h4>Load Balancer</h4>
                   <div class="borderline"></div>
                   <p class="price"><span>$</span>119
                   </p>

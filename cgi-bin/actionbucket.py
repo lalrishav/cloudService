@@ -8,6 +8,6 @@ print ""
 
 data = cgi.FieldStorage()
 print data
-for i in data:
-	print i
+print data
 
+print "<pre>"

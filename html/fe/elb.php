@@ -1,8 +1,4 @@
-<?php
-session_start();
-$user = $_SESSION['user'];
-?>
-
+<!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -363,23 +359,72 @@ $user = $_SESSION['user'];
         
         <section class="module">
           <div class="container">
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-                <h4 class="font-alt mb-0"><h3>Fill the following Information</h3></h4>
-                <hr class="divider-w mt-10 mb-20">
-                <form action="/cgi-bin/fe/createbucket.py" class="form" role="form" method="post" >
-                  <div class="form-group">
-                    <strong>
-                    <input class="form-control input-sm" type="text" placeholder="Enter the bucket name" name="name"/>
-                  </div>
-                  
-                  
-                  <div class="form-group">
-                    <input type="submit" name="submit" value="Launch Instance" class="form-control">
-                  </div>
-                  <input type="hidden" name="user" value="<?php echo $_SESSION['user'] ?>">
-
-                </form>
+            <div class="row multi-columns-row">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/createelb.php'">
+                <div class="price-table font-alt">
+                  <h4>Create Load Balancer</h4>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>9
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li><span>Newsletter</span></li>
+                    <li><span>Working Contact Form</span></li>
+                    <li><span>Unlimited Domains</span></li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/viewbucket.php'">
+                <div class="price-table font-alt">
+                  <h4>View Bucket</h4>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>29
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li>Newsletter</li>
+                    <li><span>Working Contact Form</span></li>
+                    <li><span>Unlimited Domains</span></li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="price-table font-alt best">
+                  <h4>Purchase Drive</h4>
+                  <p class="small">Best Choice</p>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>64
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li>Newsletter</li>
+                    <li>Working Contact Form</li>
+                    <li><span>Unlimited Domains</span></li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="price-table font-alt">
+                  <h4>Load Balancer</h4>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>119
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li>Newsletter</li>
+                    <li>Working Contact Form</li>
+                    <li>Unlimited Domains</li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-40">
+              <div class="col-sm-6 col-sm-offset-3 align-center">
+                <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
               </div>
             </div>
           </div>

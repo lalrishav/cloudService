@@ -1,6 +1,10 @@
 <?php
 session_start();
 $user = $_SESSION['user'];
+$dir1 = "/database/$user/instance/";
+$files1 = scandir($dir1);
+$size1=sizeof($files1);
+
 ?>
 
 <html lang="en-US" dir="ltr">
@@ -367,17 +371,30 @@ $user = $_SESSION['user'];
               <div class="col-sm-8 col-sm-offset-2">
                 <h4 class="font-alt mb-0"><h3>Fill the following Information</h3></h4>
                 <hr class="divider-w mt-10 mb-20">
-                <form action="/cgi-bin/fe/createbucket.py" class="form" role="form" method="post" >
+                <form action="/cgi-bin/fe/createelb.py" class="form" role="form" method="post" >
                   <div class="form-group">
                     <strong>
-                    <input class="form-control input-sm" type="text" placeholder="Enter the bucket name" name="name"/>
+                      <h3>Choose Instances:-</h3><br>
+                      <?php foreach ($files1 as $key => $file1) {?>
+                      <?php  
+                        //$zone = exec("sudo aws ec2 describe-instances --instance-id $file1 | grep Zone");
+
+                      ?>
+                      <?php if($key<2)
+                                continue;
+                       ?>
+                       <input type="checkbox" value="<?php echo $file1 ?>" name="<?php echo $file1 ?>">&nbsp&nbsp&nbsp&nbsp<?php echo $file1 ?><br>
+                  <?php } ?>
+                      
                   </div>
-                  
-                  
+
                   <div class="form-group">
-                    <input type="submit" name="submit" value="Launch Instance" class="form-control">
+                   <input type="text" class="form-control" placeholder="Enter load balancer name" name="name">
                   </div>
+                  
                   <input type="hidden" name="user" value="<?php echo $_SESSION['user'] ?>">
+
+                  <input type="submit" value="Create" class="form-control">
 
                 </form>
               </div>
