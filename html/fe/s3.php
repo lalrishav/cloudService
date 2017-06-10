@@ -360,9 +360,9 @@
         <section class="module">
           <div class="container">
             <div class="row multi-columns-row">
-              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/instance.php'">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/createbucket.php'">
                 <div class="price-table font-alt">
-                  <h4>Launch Instance</h4>
+                  <h4>Create Bucket</h4>
                   <div class="borderline"></div>
                   <p class="price"><span>$</span>9
                   </p>
@@ -390,7 +390,7 @@
                   </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/s3.php'">
+              <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="price-table font-alt best">
                   <h4>Purchase Drive</h4>
                   <p class="small">Best Choice</p>

@@ -1,4 +1,8 @@
 #!/usr/bin/python2
+
+#code to run terminat and create image of a instnace
+
+
 import cgi,os,commands,time
 print "Content-type:text/html"
 print ""
@@ -8,11 +12,25 @@ user = data.getvalue("user")
 action = data.getvalue("action")
 imageId = data.getvalue("acton")
 print "<pre>"
+
+pageTerminate = '''
+<center><h3><span style="color:blue">Your instance has been successfully terminated<br><a href='/fe/viewinstance.php'>View Instnaces</a></span></h3></center>
+'''
+
+pageCreateImage = '''
+<center><h3><span style="color:blue">Your image has been successfully created<br><a href='/fe/ami.php'>View Images</a></span></h3></center>
+'''
+
+
+
+
 def terminate(imageId):
 	status = commands.getstatusoutput("sudo aws ec2 terminate-instances --instance-ids {}".format(imageId,))
-	print status
+	#print status
 	if status[0]==0:
 		commands.getoutput("rm -rf /database/{}/instance/{}".format(user,imageId))
+		print pageTerminate
+
 
 def createImage(imageId):
 	instId = commands.getstatusoutput("sudo aws ec2 create-image --instance-id {} --name 'server of {}' --no-reboot".format(imageId,imageId))

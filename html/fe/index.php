@@ -393,12 +393,12 @@ if(!isset($_SESSION['user'])){
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="ec2.php">
                   <div class="content-box-image"><img src="assets/images/screenshots/aws.png" alt="Main Demo"></div>
                   <a href="/fe/ec2.php"><h3 class="content-box-title font-serif">Get Ec2 Infrastructure</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_agency.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/agency.jpg" alt="Agency"></div>
-                  <h3 class="content-box-title font-serif">Agency</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_portfolio.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/portfolio.jpg" alt="Portfolio"></div>
-                  <h3 class="content-box-title font-serif">Portfolio</h3></a></div>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="iaas.php">
+                  <div class="content-box-image"><img src="assets/images/screenshots/iaas.jpg" alt="Agency"></div>
+                  <h3 class="content-box-title font-serif">Install Your own Os</h3></a></div>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="iaas2.php">
+                  <div class="content-box-image"><img src="assets/images/screenshots/iaas2.jpg" alt="Portfolio"></div>
+                  <h3 class="content-box-title font-serif">Get Installed Os</h3></a></div>
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_restaurant.html">
                   <div class="content-box-image"><img src="assets/images/screenshots/restaurant.jpg" alt="Restaurant"></div>
                   <h3 class="content-box-title font-serif">Restaurant</h3></a></div>
