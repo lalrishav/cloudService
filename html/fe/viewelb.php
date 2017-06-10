@@ -1,3 +1,15 @@
+<?php
+                session_start();
+                $user = $_SESSION['user'];
+                $dir = "/database/$user/elb/";
+                $files = scandir($dir);
+                $size=sizeof($files);
+
+                
+
+
+
+              ?>
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
@@ -356,75 +368,96 @@
         </div>
       </nav>
       <div class="main">
-        
         <section class="module">
           <div class="container">
-            <div class="row multi-columns-row">
-              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/createelb.php'">
-                <div class="price-table font-alt">
-                  <h4>Create Load Balancer</h4>
-                  <div class="borderline"></div>
-                  <p class="price"><span>$</span>9
-                  </p>
-                  <ul class="price-details">
-                    <li>Free Support</li>
-                    <li>15 Demos Included</li>
-                    <li><span>Newsletter</span></li>
-                    <li><span>Working Contact Form</span></li>
-                    <li><span>Unlimited Domains</span></li>
-                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+            <div class="row">
+              <form action="/cgi-bin/fe/actionelb.py" method="post">
+              <div class="col-sm-6 col-sm-offset-3">
+                <h1 class="module-title font-alt">Current Intsances</h1>
+              </div>
+            </div>
+            <hr class="divider-w pt-20">
+            <div class="row">
+
+              <div class="col-sm-12">
+                <table class="table table-striped table-border checkout-table">
+                  <tbody>
+                    <tr>
+                      <th class="hidden-xs">Mark</th>
+                      <th>Instance Id</th>
+                      <th class="hidden-xs">State</th>
+                      <th>Image type</th>
+                      <th>Public Ip</th>
+                    
+                    </tr>
+                    <?php foreach($files as $count=>$file){?>
+                    <?php if($count<2) continue; ?>
+                    <tr>
+                      <td class="hidden-xs"><input type="radio" value="<?php echo $file ?>" name="acton"></td>
+                      <td>
+                        <h5 class="product-title font-alt"><?php echo $file ?></h5>
+                      </td>
+                      <td class="hidden-xs">
+                        <h5 class="product-title font-alt">Running</h5>
+                      </td>
+                      <td>
+                        <input class="form-control" type="number" name="" value="1" max="50" min="1"/>
+                      </td>
+                      <td>
+                        <h5 class="product-title font-alt">£20.00</h5>
+                      </td>
+                      
+                    </tr>
+                    <?php } ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <select class="form-control" id="" name="action" />
+                  <option value="terminate">Terminate</option>
+                  <option value="edit">Edit Instances</option>
+                </select>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/viewelb.php'">
-                <div class="price-table font-alt">
-                  <h4>View ELB</h4>
-                  <div class="borderline"></div>
-                  <p class="price"><span>$</span>29
-                  </p>
-                  <ul class="price-details">
-                    <li>Free Support</li>
-                    <li>15 Demos Included</li>
-                    <li>Newsletter</li>
-                    <li><span>Working Contact Form</span></li>
-                    <li><span>Unlimited Domains</span></li>
-                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <button class="btn btn-round btn-g" type="submit">Apply</button>
+                  <input type="hidden" value="<?php echo $user ?>" name="user">
+                </form>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="price-table font-alt best">
-                  <h4>Purchase Drive</h4>
-                  <p class="small">Best Choice</p>
-                  <div class="borderline"></div>
-                  <p class="price"><span>$</span>64
-                  </p>
-                  <ul class="price-details">
-                    <li>Free Support</li>
-                    <li>15 Demos Included</li>
-                    <li>Newsletter</li>
-                    <li>Working Contact Form</li>
-                    <li><span>Unlimited Domains</span></li>
-                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="price-table font-alt">
-                  <h4>Load Balancer</h4>
-                  <div class="borderline"></div>
-                  <p class="price"><span>$</span>119
-                  </p>
-                  <ul class="price-details">
-                    <li>Free Support</li>
-                    <li>15 Demos Included</li>
-                    <li>Newsletter</li>
-                    <li>Working Contact Form</li>
-                    <li>Unlimited Domains</li>
-                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+              <div class="col-sm-3 col-sm-offset-3">
+                <div class="form-group">
+                  <button class="btn btn-block btn-round btn-d pull-right" type="submit">Update Cart</button>
                 </div>
               </div>
             </div>
-            <div class="row mt-40">
-              <div class="col-sm-6 col-sm-offset-3 align-center">
-                <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
+            <hr class="divider-w">
+            <div class="row mt-70">
+              <div class="col-sm-5 col-sm-offset-7">
+                <div class="shop-Cart-totalbox">
+                  <h4 class="font-alt">Cart Totals</h4>
+                  <table class="table table-striped table-border checkout-table">
+                    <tbody>
+                      <tr>
+                        <th>Cart Subtotal :</th>
+                        <td>£40.00</td>
+                      </tr>
+                      <tr>
+                        <th>Shipping Total :</th>
+                        <td>£2.00</td>
+                      </tr>
+                      <tr class="shop-Cart-totalprice">
+                        <th>Total :</th>
+                        <td>£42.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button class="btn btn-lg btn-block btn-round btn-d" type="submit">Proceed to Checkout</button>
+                </div>
               </div>
             </div>
           </div>
