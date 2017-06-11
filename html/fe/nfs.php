@@ -1,12 +1,8 @@
 <?php
 session_start();
-if(!isset($_SESSION['user'])){
-  die();
-}
+$user = $_SESSION['user'];
 ?>
 
-
-<!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -363,78 +359,105 @@ if(!isset($_SESSION['user'])){
           </div>
         </div>
       </nav>
-      <section class="bg-dark-30 showcase-page-header module parallax-bg" data-background="assets/images/showcase_bg.jpg">
-        <div class="titan-caption">
-          <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1">Powerful. Multipurpose.</div>
-            <div class="font-alt mb-40 titan-title-size-4">100+ Layouts</div><a class="section-scroll btn btn-border-w btn-round" href="#demos">See Demos</a>
+      <div class="main">
+        
+        <section class="module">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h4 class="font-alt mb-0"><h3>Fill the following Information</h3></h4>
+                <hr class="divider-w mt-10 mb-20">
+                <form action="/cgi-bin/fe/nfs.py" class="form" role="form" method="post" >
+                  <div class="form-group">
+                    <strong>
+                    <input type="text" name="name" placeholder="Enter drive name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="size" placeholder="Enter the drive size in MB" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Launch Instance" class="form-control">
+                  </div>
+                  <input type="hidden" name="user" value="<?php echo $_SESSION['user'] ?>">
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="module-small bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">About Titan</h5>
+                  <p>The languages only differ in their grammar, their pronunciation and their most common words.</p>
+                  <p>Phone: +1 234 567 89 10</p>Fax: +1 234 567 89 10
+                  <p>Email:<a href="#">somecompany@example.com</a></p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Recent Comments</h5>
+                  <ul class="icon-list">
+                    <li>Maria on <a href="#">Designer Desk Essentials</a></li>
+                    <li>John on <a href="#">Realistic Business Card Mockup</a></li>
+                    <li>Andy on <a href="#">Eco bag Mockup</a></li>
+                    <li>Jack on <a href="#">Bottle Mockup</a></li>
+                    <li>Mark on <a href="#">Our trip to the Alps</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Blog Categories</h5>
+                  <ul class="icon-list">
+                    <li><a href="#">Photography - 7</a></li>
+                    <li><a href="#">Web Design - 3</a></li>
+                    <li><a href="#">Illustration - 12</a></li>
+                    <li><a href="#">Marketing - 1</a></li>
+                    <li><a href="#">Wordpress - 16</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Popular Posts</h5>
+                  <ul class="widget-posts">
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="#">Designer Desk Essentials</a></div>
+                        <div class="widget-posts-meta">23 january</div>
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-2.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="#">Realistic Business Card Mockup</a></div>
+                        <div class="widget-posts-meta">15 February</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-      <div class="main showcase-page">
-        <section class="module-extra-small bg-dark">
+        <hr class="divider-d">
+        <footer class="footer bg-dark">
           <div class="container">
             <div class="row">
-              <div class="col-sm-6 col-md-8 col-lg-9">
-                <div class="callout-text font-alt">
-                  <h4 style="margin-top: 0px; font-;">Start Creating Beautiful Websites</h4>
-                  <p style="margin-bottom: 0px;">Download Titan Free today!</p>
+              <div class="col-sm-6">
+                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">TitaN</a>, All Rights Reserved</p>
+              </div>
+              <div class="col-sm-6">
+                <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="https://themewagon.com/themes/titan/">Downlaod Free</a></div>
-              </div>
             </div>
           </div>
-        </section>
-        <section class="module-medium" id="demos">
-          <div class="container">
-            <div class="row multi-columns-row">
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="ec2.php">
-                  <div class="content-box-image"><img src="assets/images/screenshots/aws.png" alt="Main Demo"></div>
-                  <a href="/fe/ec2.php"><h3 class="content-box-title font-serif">Get Ec2 Infrastructure</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="iaas.php">
-                  <div class="content-box-image"><img src="assets/images/screenshots/iaas.jpg" alt="Agency"></div>
-                  <h3 class="content-box-title font-serif">Install Your own Os</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="iaas2.php">
-                  <div class="content-box-image"><img src="assets/images/screenshots/iaas2.jpg" alt="Portfolio"></div>
-                  <h3 class="content-box-title font-serif">Get Installed Os</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="objectstorage.php">
-                  <div class="content-box-image"><img src="assets/images/screenshots/objectstorage.jpg" alt="Restaurant"></div>
-                  <h3 class="content-box-title font-serif">Get started with Object storage</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_finance.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/finance.jpg" alt="Finance"></div>
-                  <h3 class="content-box-title font-serif">Finance</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_landing.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/landing.jpg" alt="Landing"></div>
-                  <h3 class="content-box-title font-serif">Landing</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_photography.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/photography.jpg" alt="Photography"></div>
-                  <h3 class="content-box-title font-serif">Photography</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_shop.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/shop.jpg" alt="Shop"></div>
-                  <h3 class="content-box-title font-serif">Shop</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_op_fullscreen_gradient_overlay.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/one_page.jpg" alt="One Page"></div>
-                  <h3 class="content-box-title font-serif">One Page</h3></a></div>
-            </div>
-          </div>
-        </section>
-        <section class="module-extra-small bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-8 col-lg-9">
-                <div class="callout-text font-alt">
-                  <h4 style="margin-top: 0px;">Start Creating Beautiful Websites</h4>
-                  <p style="margin-bottom: 0px;">Download Titan Free today!</p>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="https://themewagon.com/themes/titan/">Downlaod Free</a></div>
-              </div>
-            </div>
-          </div>
-        </section>
+        </footer>
       </div>
       <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
     </main>
