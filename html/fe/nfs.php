@@ -370,15 +370,15 @@ $user = $_SESSION['user'];
                 <form action="/cgi-bin/fe/nfs.py" class="form" role="form" method="post" >
                   <div class="form-group">
                     <strong>
-                    <input type="text" name="name" placeholder="Enter drive name" class="form-control">
+                    <input type="text" name="dname" placeholder="Enter drive name" class="form-control">
                   </div>
                   <div class="form-group">
-                    <input type="text" name="size" placeholder="Enter the drive size in MB" class="form-control">
+                    <input type="text" name="dsize" placeholder="Enter the drive size in MB" class="form-control">
                   </div>
                   <div class="form-group">
                     <input type="submit" value="Launch Instance" class="form-control">
                   </div>
-                  <input type="hidden" name="user" value="<?php echo $_SESSION['user'] ?>">
+                  <input type="hidden" name="uname" value="<?php echo $_SESSION['user'] ?>">
 
                 </form>
               </div>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
+    <style type="text/css">
+
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -375,7 +378,7 @@
                   </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/viewelb.php'">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/cifs.php'">
                 <div class="price-table font-alt">
                   <h4>CIFS</h4>
                   <div class="borderline"></div>

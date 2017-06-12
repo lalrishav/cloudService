@@ -1,15 +1,9 @@
-<?php
-session_start();
-if(!isset($_SESSION['user'])){
-  die();
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
-    <style type="text/css"></style>
+    <style type="text/css">
+
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +11,7 @@ if(!isset($_SESSION['user'])){
     Document Title
     =============================================
     -->
-    <title>CodeGeeks | Multiservice CLoud Services</title>
+    <title>Titan | Multipurpose HTML5 Template</title>
     <!--  
     Favicons
     =============================================
@@ -364,78 +358,153 @@ if(!isset($_SESSION['user'])){
           </div>
         </div>
       </nav>
-      <section class="bg-dark-30 showcase-page-header module parallax-bg" data-background="assets/images/cloud.jpg">
-        <div class="titan-caption">
-          <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1">Powerful. Multiservices.</div>
-            <div class="font-alt mb-40 titan-title-size-4">20+ Services</div><a class="section-scroll btn btn-border-w btn-round" href="#demos">Start Free</a>
-          </div>
-        </div>
-      </section>
-      <div class="main showcase-page">
-        <section class="module-extra-small bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-8 col-lg-9">
-                <div class="callout-text font-alt">
-                  <h4 style="margin-top: 0px; font-;">Start Creating Beautiful Websites</h4>
-                  <p style="margin-bottom: 0px;">Download Titan Free today!</p>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="https://themewagon.com/themes/titan/">Downlaod Free</a></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="module-medium" id="demos">
+      <div class="main">
+        
+        <section class="module">
           <div class="container">
             <div class="row multi-columns-row">
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="ec2.php">
-                  <div class="content-box-image"><img src="assets/images/screenshots/aws.png" alt="Main Demo"></div>
-                  <a href="/fe/ec2.php"><h3 class="content-box-title font-serif">Get Ec2 Infrastructure</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="iaas.php">
-                  <div class="content-box-image"><img src="assets/images/screenshots/iaas.jpg" alt="Agency"></div>
-                  <h3 class="content-box-title font-serif">Install Your own Os</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="iaas2.php">
-                  <div class="content-box-image"><img src="assets/images/screenshots/iaas2.jpg" alt="Portfolio"></div>
-                  <h3 class="content-box-title font-serif">Get Installed Os</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="objectstorage.php">
-                  <div class="content-box-image"><img src="assets/images/screenshots/objectstorage.jpg" alt="Restaurant"></div>
-                  <h3 class="content-box-title font-serif">Get started with Object storage</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="saas.php">
-                  <div class="content-box-image"><img src="assets/images/screenshots/saas.jpg" alt="Finance"></div>
-                  <h3 class="content-box-title font-serif">Software as Service</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_landing.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/landing.jpg" alt="Landing"></div>
-                  <h3 class="content-box-title font-serif">Landing</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_photography.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/photography.jpg" alt="Photography"></div>
-                  <h3 class="content-box-title font-serif">Photography</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_shop.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/shop.jpg" alt="Shop"></div>
-                  <h3 class="content-box-title font-serif">Shop</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_op_fullscreen_gradient_overlay.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/one_page.jpg" alt="One Page"></div>
-                  <h3 class="content-box-title font-serif">One Page</h3></a></div>
-            </div>
-          </div>
-        </section>
-        <section class="module-extra-small bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-8 col-lg-9">
-                <div class="callout-text font-alt">
-                  <h4 style="margin-top: 0px;">Start Creating Beautiful Websites</h4>
-                  <p style="margin-bottom: 0px;">Download Titan Free today!</p>
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/nfs.php'">
+                <div class="price-table font-alt">
+                  <h4>Get Software</h4>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>9
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li><span>Newsletter</span></li>
+                    <li><span>Working Contact Form</span></li>
+                    <li><span>Unlimited Domains</span></li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="https://themewagon.com/themes/titan/">Downlaod Free</a></div>
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/cifs.php'">
+                <div class="price-table font-alt">
+                  <h4>CIFS</h4>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>29
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li>Newsletter</li>
+                    <li><span>Working Contact Form</span></li>
+                    <li><span>Unlimited Domains</span></li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="price-table font-alt best">
+                  <h4>View Storage</h4>
+                  <p class="small">Best Choice</p>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>64
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li>Newsletter</li>
+                    <li>Working Contact Form</li>
+                    <li><span>Unlimited Domains</span></li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="price-table font-alt">
+                  <h4>----------</h4>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>119
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li>Newsletter</li>
+                    <li>Working Contact Form</li>
+                    <li>Unlimited Domains</li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-40">
+              <div class="col-sm-6 col-sm-offset-3 align-center">
+                <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
               </div>
             </div>
           </div>
         </section>
+        <div class="module-small bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">About Titan</h5>
+                  <p>The languages only differ in their grammar, their pronunciation and their most common words.</p>
+                  <p>Phone: +1 234 567 89 10</p>Fax: +1 234 567 89 10
+                  <p>Email:<a href="#">somecompany@example.com</a></p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Recent Comments</h5>
+                  <ul class="icon-list">
+                    <li>Maria on <a href="#">Designer Desk Essentials</a></li>
+                    <li>John on <a href="#">Realistic Business Card Mockup</a></li>
+                    <li>Andy on <a href="#">Eco bag Mockup</a></li>
+                    <li>Jack on <a href="#">Bottle Mockup</a></li>
+                    <li>Mark on <a href="#">Our trip to the Alps</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Blog Categories</h5>
+                  <ul class="icon-list">
+                    <li><a href="#">Photography - 7</a></li>
+                    <li><a href="#">Web Design - 3</a></li>
+                    <li><a href="#">Illustration - 12</a></li>
+                    <li><a href="#">Marketing - 1</a></li>
+                    <li><a href="#">Wordpress - 16</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Popular Posts</h5>
+                  <ul class="widget-posts">
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="#">Designer Desk Essentials</a></div>
+                        <div class="widget-posts-meta">23 january</div>
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-2.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="#">Realistic Business Card Mockup</a></div>
+                        <div class="widget-posts-meta">15 February</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="divider-d">
+        <footer class="footer bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">TitaN</a>, All Rights Reserved</p>
+              </div>
+              <div class="col-sm-6">
+                <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
       <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
     </main>
