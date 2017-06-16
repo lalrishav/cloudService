@@ -1,10 +1,9 @@
-<?php
-session_start();
-$user = $_SESSION['user'];
-?>
-
+<!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
+    <style type="text/css">
+
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -363,28 +362,72 @@ $user = $_SESSION['user'];
         
         <section class="module">
           <div class="container">
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-                <h4 class="font-alt mb-0"><h3>Fill the following Information</h3></h4>
-                <hr class="divider-w mt-10 mb-20">
-                <form action="/cgi-bin/fe/iaas.py" class="form" role="form" method="post" >
-                  <div class="form-group">
-                    <strong>
-                    <input type="text" class="form-control" placeholder="Enter your drive name" name="os">
-                  </div>
-                  <div class="form-group">
-                    <input type="number" class="form-control" placeholder="Enter size of ram" name="ram">
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control input-sm" type="text" placeholder="Enter the number of Core CPU" name="cpu"/>
-                  </div>
-                  
-                  <div class="form-group">
-                    <input type="submit" value="Launch Instance" class="form-control">
-                  </div>
-                  <input type="hidden" name="user" value="<?php echo $user ?>">
-
-                </form>
+            <div class="row multi-columns-row">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/getplatform.php'">
+                <div class="price-table font-alt">
+                  <h4>Choose your Platform</h4>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>9
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li><span>Newsletter</span></li>
+                    <li><span>Working Contact Form</span></li>
+                    <li><span>Unlimited Domains</span></li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/viewplatform.php'">
+                <div class="price-table font-alt">
+                  <h4>View Your Services</h4>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>29
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li>Newsletter</li>
+                    <li><span>Working Contact Form</span></li>
+                    <li><span>Unlimited Domains</span></li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="price-table font-alt best">
+                  <h4>View Storage</h4>
+                  <p class="small">Best Choice</p>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>64
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li>Newsletter</li>
+                    <li>Working Contact Form</li>
+                    <li><span>Unlimited Domains</span></li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="price-table font-alt">
+                  <h4>----------</h4>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>119
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>15 Demos Included</li>
+                    <li>Newsletter</li>
+                    <li>Working Contact Form</li>
+                    <li>Unlimited Domains</li>
+                  </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-40">
+              <div class="col-sm-6 col-sm-offset-3 align-center">
+                <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
               </div>
             </div>
           </div>

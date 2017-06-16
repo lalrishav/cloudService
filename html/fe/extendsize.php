@@ -1,6 +1,7 @@
 <?php
 session_start();
 $user = $_SESSION['user'];
+$dname = $_GET['dname'];
 ?>
 
 <html lang="en-US" dir="ltr">
@@ -367,22 +368,18 @@ $user = $_SESSION['user'];
               <div class="col-sm-8 col-sm-offset-2">
                 <h4 class="font-alt mb-0"><h3>Fill the following Information</h3></h4>
                 <hr class="divider-w mt-10 mb-20">
-                <form action="/cgi-bin/fe/iaas.py" class="form" role="form" method="post" >
+                <form action="/cgi-bin/fe/extendsize.py" class="form" role="form" method="post" >
                   <div class="form-group">
                     <strong>
-                    <input type="text" class="form-control" placeholder="Enter your drive name" name="os">
+                    <input type="text" name="dname" placeholder="Enter drive name" class="form-control" value="<?php echo $dname ?>">
                   </div>
                   <div class="form-group">
-                    <input type="number" class="form-control" placeholder="Enter size of ram" name="ram">
+                    <input type="text" name="dsize" placeholder="Enter the drive size in MB" class="form-control">
                   </div>
                   <div class="form-group">
-                    <input class="form-control input-sm" type="text" placeholder="Enter the number of Core CPU" name="cpu"/>
+                    <input type="submit" value="Submit" class="form-control">
                   </div>
-                  
-                  <div class="form-group">
-                    <input type="submit" value="Launch Instance" class="form-control">
-                  </div>
-                  <input type="hidden" name="user" value="<?php echo $user ?>">
+                  <input type="hidden" name="uname" value="<?php echo $_SESSION['user'] ?>">
 
                 </form>
               </div>

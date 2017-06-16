@@ -418,6 +418,8 @@
                 <div class="form-group">
                   <select class="form-control" id="" name="action" />
                   <option value="terminate">Terminate</option>
+                  <option value="uploadfile">Upload File</option>
+                  <option value="uploaddir">Upload Directory</option>
                 </select>
                 </div>
               </div>

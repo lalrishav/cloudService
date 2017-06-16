@@ -92,7 +92,7 @@ if(isset($_SESSION['user'])){
 				<br>
 				<input type="text" placeholder="Enter your username" name="user">
 				<br><br>
-				<input type="text" placeholder="Enter your password" name="password"><br><br>
+				<input type="password" placeholder="Enter your password" name="password"><br><br>
 				<input type="submit" id="submit" value="GO">
 			</form>
 

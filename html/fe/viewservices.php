@@ -1,8 +1,16 @@
 <?php
-session_start();
-$user = $_SESSION['user'];
-?>
+                session_start();
+                $user = $_SESSION['user'];
+                $dir = "/var/www/html/database/$user/saas/";
+                $files = scandir($dir);
+                $size=sizeof($files);
 
+                
+
+
+
+              ?>
+<!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -360,33 +368,64 @@ $user = $_SESSION['user'];
         </div>
       </nav>
       <div class="main">
-        
         <section class="module">
           <div class="container">
             <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-                <h4 class="font-alt mb-0"><h3>Fill the following Information</h3></h4>
-                <hr class="divider-w mt-10 mb-20">
-                <form action="/cgi-bin/fe/iaas.py" class="form" role="form" method="post" >
-                  <div class="form-group">
-                    <strong>
-                    <input type="text" class="form-control" placeholder="Enter your drive name" name="os">
-                  </div>
-                  <div class="form-group">
-                    <input type="number" class="form-control" placeholder="Enter size of ram" name="ram">
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control input-sm" type="text" placeholder="Enter the number of Core CPU" name="cpu"/>
-                  </div>
-                  
-                  <div class="form-group">
-                    <input type="submit" value="Launch Instance" class="form-control">
-                  </div>
-                  <input type="hidden" name="user" value="<?php echo $user ?>">
-
-                </form>
+              <form action="/cgi-bin/fe/actionbucket.py" method="post">
+              <div class="col-sm-6 col-sm-offset-3">
+                <h1 class="module-title font-alt">Current Intsances</h1>
               </div>
             </div>
+            <hr class="divider-w pt-20">
+            <div class="row">
+
+              <div class="col-sm-12">
+                <table class="table table-striped table-border checkout-table">
+                  <tbody>
+                    <tr>
+                      <th class="hidden-xs">Mark</th>
+                      <th>Instance Id</th>
+                      <th class="hidden-xs">State</th>
+                      
+                    
+                    </tr>
+                    <?php foreach($files as $count=>$file){?>
+                    <?php if($count<2) continue; ?>
+                    <tr>
+                      <td class="hidden-xs"><input type="radio" value="<?php echo $file ?>" name="acton"></td>
+                      <td>
+                        <h5 class="product-title font-alt"><?php echo explode(".",$file)[0] ?></h5>
+                      </td>
+                      <td class="hidden-xs">
+                        <h5 class="product-title font-alt">Running</h5>
+                      </td>
+                      
+                      
+                    </tr>
+                    <?php } ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <select class="form-control" id="" name="action" />
+                  <option value="terminate">Terminate</option>
+                </select>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <button class="btn btn-block btn-round btn-d pull-right" type="submit">Apply</button>
+                  <input type="hidden" value="<?php echo $user ?>" name="user">
+                </form>
+                </div>
+              </div>
+              
+            </div>
+            <hr class="divider-w">
+            
           </div>
         </section>
         <div class="module-small bg-dark">

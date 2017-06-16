@@ -376,7 +376,7 @@ $user = $_SESSION['user'];
                     <input type="text" name="dsize" placeholder="Enter the drive size in MB" class="form-control">
                   </div>
                   <div class="form-group">
-                    <input type="submit" value="Launch Instance" class="form-control">
+                    <input type="submit" value="Submit" class="form-control">
                   </div>
                   <input type="hidden" name="uname" value="<?php echo $_SESSION['user'] ?>">
 

@@ -393,7 +393,7 @@
                   </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/viewstorage.php'">
                 <div class="price-table font-alt best">
                   <h4>View Storage</h4>
                   <p class="small">Best Choice</p>

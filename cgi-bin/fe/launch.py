@@ -19,6 +19,9 @@ for i in range (0,int(ino)):
 		commands.getoutput("sudo mkdir /database/{}/instance".format(user))
 		commands.getoutput("sudo chmod 777 /database/{}".format(user))
 		commands.getoutput("sudo chmod 777 /database/{}/instance".format(user))
+	commands.getoutput("sudo mkdir /database/{}/instance".format(user))
+	commands.getoutput("sudo chmod 777 /database/{}".format(user))
+	commands.getoutput("sudo chmod 777 /database/{}/instance".format(user))
 	f=open("/database/{}/instance/{}".format(user,instId[1:-1]),'a')
 	f.close()
 

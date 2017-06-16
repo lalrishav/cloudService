@@ -367,22 +367,20 @@ $user = $_SESSION['user'];
               <div class="col-sm-8 col-sm-offset-2">
                 <h4 class="font-alt mb-0"><h3>Fill the following Information</h3></h4>
                 <hr class="divider-w mt-10 mb-20">
-                <form action="/cgi-bin/fe/iaas.py" class="form" role="form" method="post" >
+                <form action="/cgi-bin/paas.py" class="form" role="form" method="post" >
                   <div class="form-group">
                     <strong>
-                    <input type="text" class="form-control" placeholder="Enter your drive name" name="os">
+                    <select name="platform" class="form-control">
+                      <option value="python">Python</option>
+                      <option value="php">Php</option>
+                      <option value="ruby">Ruby</option>
+                      <option value="perl">Perl</option>
+                    </select>
                   </div>
                   <div class="form-group">
-                    <input type="number" class="form-control" placeholder="Enter size of ram" name="ram">
+                    <input type="submit" value="Launch Service" class="form-control">
                   </div>
-                  <div class="form-group">
-                    <input class="form-control input-sm" type="text" placeholder="Enter the number of Core CPU" name="cpu"/>
-                  </div>
-                  
-                  <div class="form-group">
-                    <input type="submit" value="Launch Instance" class="form-control">
-                  </div>
-                  <input type="hidden" name="user" value="<?php echo $user ?>">
+                  <input type="hidden" name="uname" value="<?php echo $_SESSION['user'] ?>">
 
                 </form>
               </div>

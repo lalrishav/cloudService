@@ -393,7 +393,7 @@ if(!isset($_SESSION['user'])){
             <div class="row multi-columns-row">
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="ec2.php">
                   <div class="content-box-image"><img src="assets/images/screenshots/aws.png" alt="Main Demo"></div>
-                  <a href="/fe/ec2.php"><h3 class="content-box-title font-serif">Get Ec2 Infrastructure</h3></a></div>
+                  <a href="/fe/ec2.php"><h3 class="content-box-title font-serif">Get AWS Services</h3></a></div>
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="iaas.php">
                   <div class="content-box-image"><img src="assets/images/screenshots/iaas.jpg" alt="Agency"></div>
                   <h3 class="content-box-title font-serif">Install Your own Os</h3></a></div>
@@ -406,9 +406,9 @@ if(!isset($_SESSION['user'])){
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="saas.php">
                   <div class="content-box-image"><img src="assets/images/screenshots/saas.jpg" alt="Finance"></div>
                   <h3 class="content-box-title font-serif">Software as Service</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_landing.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/landing.jpg" alt="Landing"></div>
-                  <h3 class="content-box-title font-serif">Landing</h3></a></div>
+              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="paas.php">
+                  <div class="content-box-image"><img src="assets/images/screenshots/paas.jpg" alt="Landing"></div>
+                  <h3 class="content-box-title font-serif">Platform as a Service</h3></a></div>
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_photography.html">
                   <div class="content-box-image"><img src="assets/images/screenshots/photography.jpg" alt="Photography"></div>
                   <h3 class="content-box-title font-serif">Photography</h3></a></div>

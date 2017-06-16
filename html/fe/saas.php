@@ -363,7 +363,7 @@
         <section class="module">
           <div class="container">
             <div class="row multi-columns-row">
-              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/nfs.php'">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/getsoftware.php'">
                 <div class="price-table font-alt">
                   <h4>Get Software</h4>
                   <div class="borderline"></div>
@@ -378,9 +378,9 @@
                   </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/cifs.php'">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='http://192.168.1.100/cgi-bin/fe/broadway.py'">
                 <div class="price-table font-alt">
-                  <h4>CIFS</h4>
+                  <h4>Broadway</h4>
                   <div class="borderline"></div>
                   <p class="price"><span>$</span>29
                   </p>
@@ -393,9 +393,9 @@
                   </ul><a class="btn btn-d btn-round" href="#">Proceed</a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="col-sm-6 col-md-3 col-lg-3" onclick="location.href='/fe/viewservices.php'">
                 <div class="price-table font-alt best">
-                  <h4>View Storage</h4>
+                  <h4>View Services</h4>
                   <p class="small">Best Choice</p>
                   <div class="borderline"></div>
                   <p class="price"><span>$</span>64

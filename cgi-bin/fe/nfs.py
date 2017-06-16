@@ -85,5 +85,6 @@ print "Your drive has been created Successfully"
 #commands.getoutput("sudo systemctl stop httpd")
 #commands.getoutput("sudo systemctl start httpd")
 print "<a href='/users/{}/{}'>See your drive</a>".format(uname,dname)
+print "<a href='/database/{}/nfs/{}.sh'>Download .sh file</a>".format(uname,dname)
 
 

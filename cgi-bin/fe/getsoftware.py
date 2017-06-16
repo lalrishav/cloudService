@@ -79,7 +79,7 @@ commands.getoutput("chmod 777 "+save_point+"/cifs")
 
 f = open("/var/www/html/database/{}/cifs/{}.sh".format(uname,dname),'w')
 print "--------------------wsefrgfsefdgtfhefrt--------------"
-msg = "#!/usr/bin/python2\nimport os\nos.system('systemctl restart smb')\nos.system('mkdir /media/{}')\nos.system('mount -t cifs -o username={} //192.168.1.200/{} /media/{}')\n".format(dname,dname,dname,dname)
+msg = "#!/usr/bin/python2\nimport os\nos.system('systemctl restart smb')\nos.system('mkdir /media/{}'\nos.system('mount -t cifs -o username={} //192.168.1.200/{} /media/{}'\n".format(dname,dname,dname,dname)
 print "abcdabcdbabcdbdbdbdbdbdbdbd"
 print "<pre>"
 print msg
@@ -87,9 +87,7 @@ print "</pre>"
 f.write(msg)
 f.close()
 print "fgryhdusakdkfghjgfkdsdfjhugrsejidoklcv bvjgfuiriejdc"
-print "<a href='/database/{}/cifs/{}.sh'>download here</a>".format(uname,dname)
-print "<br>"
-print "<a href='/users/{}/{}'>See your drive</a>".format(uname,dname)
+print "<a href='/cifs.sh'>download here</a>"
 print "</div>"
 
 
